@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #fafa;
+    padding: 0 20px;
+}
+
+.main {
+    max-width: 450px;
+    margin: 150px auto;
+}
+
+.main .search {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12) ;
+}
+
+.search input {
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search .search-button {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+
+.search.active input {
+    border-radius: 5px 5px 0 0;
+}
+
+.search .autocomplete-box {
+    padding: 0;
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    
+}
+
+.search.active .autocomplete-box {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.autocomplete-box li {
+    list-style: none;
+    padding: 0px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
+}
+
+.search.active .autocomplete-box li{
+    display: block;
+}
+
+.autocomplete-box li:hover {
+    background-color: #efefef;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading:after {
+    visibility: visible;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather .weather-info {
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    
+}
